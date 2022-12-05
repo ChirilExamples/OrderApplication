@@ -1,0 +1,34 @@
+package com.example.anclinic.oreder_feature.presentation.components
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material.Icon
+import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForwardIos
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import com.example.anclinic.oreder_feature.presentation.state.DelivererListItem
+import com.example.anclinic.ui.theme.white
+
+@Composable
+fun DelivererUiListItem(
+    delivererListItem: DelivererListItem,
+    modifier: Modifier = Modifier
+) {
+
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(text = delivererListItem.name, color = white)
+        Icon(
+            imageVector = Icons.Default.ArrowForwardIos,
+            contentDescription = "arrow right",
+            tint = white
+        )
+
+    }
+}
